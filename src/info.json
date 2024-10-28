@@ -1,0 +1,10 @@
+{
+  "name": "colorblind-pollution-and-nests",
+  "version": "1.0.0",
+  "title": "Colorblind Pollution and Nests",
+  "author": "Elwin",
+  "homepage": "https://github.com/Elwin00/factorio-colorblind-pollution-and-nests",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0"],
+  "description": "Changes the color of the pollution to light blue for easier visibility on the map & changes the color of the hives on the map from red to white. Special thanks to LCStark on the modding website for contributing so the map refreshes upon joining and you can use it on old saves! Legend!\n\nForked from the original project \"Colorblind Pollution & Nests\" by Marko Galić, see https://mods.factorio.com/mod/colorblind-pollution"
+}
