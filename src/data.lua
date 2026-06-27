@@ -1,3 +1,1 @@
---data.lua
-
-require("colorblind")
+require("recolor")
