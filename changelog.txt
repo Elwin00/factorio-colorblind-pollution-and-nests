@@ -4,6 +4,7 @@ Date: 2026-06-27
   Features:
     - Added startup settings to independently toggle the pollution recolor and the enemy/nest recolor.
   Changes:
+    - Recoloring now applies to all forces instead of only the player force, for better multiplayer/co-op support.
     - Renamed the internal recolor module file.
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
