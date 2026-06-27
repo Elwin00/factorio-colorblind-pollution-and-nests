@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2026-06-27
+  Features:
+    - Pollution and enemy map colors can now be customized with color pickers in the startup settings. Defaults match the previous fixed colors.
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2026-06-27
   Features:

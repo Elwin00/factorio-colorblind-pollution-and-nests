@@ -6,19 +6,23 @@ A Factorio mod that recolors pollution and enemies on the map and minimap so the
 
 - Recolors the **pollution** overlay on the map and minimap.
 - Recolors **enemy nests and other enemy structures** on the map and minimap (the default is red).
-- Each recolor can be turned on or off independently.
+- Each recolor can be turned on or off independently, and its color is customizable with a color picker.
 - The map is automatically refreshed when the mod is added or its settings change, so the new colors apply to already-explored areas, not just newly-charted ones.
 
 ## Settings
 
-The mod adds two startup settings (found under **Settings → Mod settings → Startup**):
+The mod adds four startup settings (found under **Settings → Mod settings → Startup**) — an on/off toggle for each recolor, each with an accompanying color picker:
 
-| Setting                      | Default | Effect                                                                                           |
-|------------------------------|---------|--------------------------------------------------------------------------------------------------|
-| Recolor pollution on the map | On      | When enabled, pollution is shown in a custom color instead of the game default.                  |
-| Recolor enemies on the map   | On      | When enabled, enemy nests and structures are shown in a custom color instead of the default red. |
+| Setting                      | Default    | Effect                                                                                              |
+|------------------------------|------------|----------------------------------------------------------------------------------------------------|
+| Recolor pollution on the map | On         | When enabled, pollution is shown in the chosen color instead of the game default.                   |
+| Pollution color              | Light blue | The color used for pollution when the pollution recolor is enabled.                                 |
+| Recolor enemies on the map   | On         | When enabled, enemy nests and structures are shown in the chosen color instead of the default red.  |
+| Enemy color                  | White      | The color used for enemies when the enemy recolor is enabled.                                       |
 
-When a setting is unchecked, the corresponding element keeps its normal in-game color.
+Each color picker defaults to the mod's original colors (light blue pollution, white enemies), so leaving them untouched preserves the classic look.
+
+When a toggle is unchecked, the corresponding element keeps its normal in-game color, and its color picker has no effect.
 
 Because these are startup settings, changing them requires returning to the main menu and restarting Factorio for the change to take effect — this is standard for any setting that affects how the game's data is loaded.
 
