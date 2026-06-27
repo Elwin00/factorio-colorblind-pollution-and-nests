@@ -1,10 +1,10 @@
 {
   "name": "colorblind-pollution-and-nests",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "title": "Colorblind Pollution and Nests",
   "author": "Elwin",
   "homepage": "https://github.com/Elwin00/factorio-colorblind-pollution-and-nests",
   "factorio_version": "2.1",
   "dependencies": ["base >= 2.0"],
-  "description": "Recolors pollution and enemy nests on the map and minimap to make them easier to tell apart for players with color vision deficiencies (color blindness), instead of relying on the default colors that can be hard to distinguish. Each recolor can be toggled independently in the startup settings.\\n\\nForked from the original project \\\"Colorblind Pollution & Nests\\\" by Marko Galić, see https://mods.factorio.com/mod/colorblind-pollution"
+  "description": "Recolors pollution and enemy nests on the map and minimap to make them easier to tell apart for players with color vision deficiencies (color blindness), instead of relying on the default colors that can be hard to distinguish. Each recolor can be toggled independently in the startup settings.\n\nForked from the original project \"Colorblind Pollution & Nests\" by Marko Galić, see https://mods.factorio.com/mod/colorblind-pollution"
 }
