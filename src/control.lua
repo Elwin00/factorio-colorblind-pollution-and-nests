@@ -1,5 +1,7 @@
 local function rechart()
-  game.forces.player.rechart()
+  for _, force in pairs(game.forces) do
+    force.rechart()
+  end
 end
 
 script.on_init(rechart)
