@@ -1,0 +1,58 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*.*.*'   # matches bare version tags like 1.2.0
+
+permissions:
+  contents: write   # required for the token to create releases
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read name and version from info.json
+        id: mod
+        run: |
+          NAME=$(jq -r '.name' info.json)
+          VERSION=$(jq -r '.version' info.json)
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Verify tag matches info.json version
+        run: |
+          if [ "$GITHUB_REF_NAME" != "${{ steps.mod.outputs.version }}" ]; then
+            echo "::error::Tag ($GITHUB_REF_NAME) does not match info.json version (${{ steps.mod.outputs.version }}). Bump info.json or fix the tag."
+            exit 1
+          fi
+
+      - name: Stage mod files
+        run: |
+          DIR="${{ steps.mod.outputs.name }}_${{ steps.mod.outputs.version }}"
+          mkdir -p "build/$DIR"
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.gitignore' \
+            --exclude='build' \
+            ./ "build/$DIR/"
+
+      - name: Create zip
+        run: |
+          DIR="${{ steps.mod.outputs.name }}_${{ steps.mod.outputs.version }}"
+          cd build
+          zip -r "${DIR}.zip" "$DIR"
+
+      - name: Create release and upload asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DIR="${{ steps.mod.outputs.name }}_${{ steps.mod.outputs.version }}"
+          gh release create "$GITHUB_REF_NAME" \
+            "build/${DIR}.zip" \
+            --title "${{ steps.mod.outputs.version }}" \
+            --generate-notes
