@@ -1,1 +1,1 @@
-require("prototypes.recolor")
+require("prototypes.recolor-pollution-and-enemies")
