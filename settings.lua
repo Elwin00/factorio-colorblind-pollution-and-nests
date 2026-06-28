@@ -26,5 +26,12 @@ data:extend({
     setting_type = "startup",
     default_value = {r = 1, g = 1, b = 1, a = 1},
     order = "bb"
+  },
+  {
+    type = "bool-setting",
+    name = "colorblind-bulk-inserter-enabled",
+    setting_type = "startup",
+    default_value = false,
+    order = "ca"
   }
 })
