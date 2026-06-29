@@ -1,7 +1,7 @@
 local C = require("constants")
 local dbg = C.dbg
 
-if settings.startup["colorblind-bulk-inserter-enabled"].value then
+if settings.startup[C.settings.bulk_inserter_enabled].value then
     local inserter = data.raw["inserter"] and data.raw["inserter"]["bulk-inserter"]
     if not inserter then
       dbg("MISS entity: inserter/bulk-inserter")
