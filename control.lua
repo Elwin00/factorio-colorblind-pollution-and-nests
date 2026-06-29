@@ -2,6 +2,8 @@ local CONSTANTS = require("constants")
 
 local function create_chart_settings_signature()
   local s = settings.startup
+  if s == nil then error("failed to load startup settings") end
+  
   local function format_column(c) return string.format("%.4f,%.4f,%.4f,%.4f", c.r or 0, c.g or 0, c.b or 0, c.a or 1) end
   return table.concat({
     tostring(s[CONSTANTS.settings.pollution_enabled].value), format_column(s[CONSTANTS.settings.pollution_color].value),

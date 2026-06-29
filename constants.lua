@@ -1,4 +1,3 @@
--- Shared constants + helpers. require("constants") from any stage (data / data-updates / control).
 local C = {}
 
 C.DEBUG = false
