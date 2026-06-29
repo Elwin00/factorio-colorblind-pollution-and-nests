@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
-Date: 2026-06-27
+Date: 2026-06-29
   Features:
     - Pollution and enemy map colors can now be customized with color pickers in the startup settings. Defaults match the previous fixed colors.
+    - Added an optional setting (off by default) to recolor the bulk inserter toward a more distinct green, making it easier to tell apart from the regular inserter. Applies to the in-world entity, its item and entity icons, and its research icons.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2026-06-27
